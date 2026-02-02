@@ -1,57 +1,92 @@
-/* General Styles */
+/* ===============================
+   GENERAL STYLES
+================================= */
+
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth;
 }
 
-/* Header */
-header {
-    background: #FF6F3C;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-}
 
-header .header-content {
-    max-width: 900px;
+/* Reusable content width */
+.container {
+    width: 1000%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+
+/* ===============================
+   HERO HEADER
+================================= */
+
+.hero {
+    background: url("../images/header-image.png") no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Overlay for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
 .header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
-/* Logo */
+
+/* ===============================
+   LOGO
+================================= */
+
 .logo {
     width: 100%;
-    max-width: 280px; /* mobile size */
+    max-width: 300px;
     height: auto;
-    margin: 0;
+    margin-top: 50px;
 }
 
 
-/* Slogan text */
-header h1 {
-    font-size: 1.2rem;
+/* ===============================
+   HEADER TEXT
+================================= */
+
+.hero h1 {
+    font-size: 1.4rem;
     line-height: 1.4;
     margin: 0;
-    max-width: 90%;
+    max-width: 800px;
 }
 
 
+/* ===============================
+   BUTTONS
+================================= */
 
-
-/* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 12px 28px;
     background: #4DA6FF;
     color: #fff;
     text-decoration: none;
@@ -67,20 +102,22 @@ header h1 {
 
 .btn-group {
     text-align: center;
-    width: 100%;
 }
 
 
-/* Sticky Navigation */
+/* ===============================
+   STICKY NAVIGATION
+================================= */
+
 .sticky-nav {
     position: sticky;
     top: 0;
     background: #fff;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 30px;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     z-index: 100;
 }
 
@@ -95,24 +132,32 @@ header h1 {
     color: #357ACC;
 }
 
-/* Sections */
+
+/* ===============================
+   SECTIONS
+================================= */
+
 section {
-    padding: 60px 20px;
-    text-align: center;
+    padding: 80px 0;
+    text-align: left;
 }
 
 section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
     color: #FF6F3C;
 }
 
 section p {
-    max-width: 700px;
-    margin: 0 auto 20px;
+    max-width: 900px;
+    margin-bottom: 25px;
 }
 
-/* Fade-in Animation */
+
+/* ===============================
+   FADE IN ANIMATION
+================================= */
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -126,29 +171,28 @@ section p {
     }
 }
 
-/* Products */
-.products img {
-    width: 200px;
-    margin: 10px;
-    border-radius: 15px;
+
+/* ===============================
+   PRODUCTS CAROUSEL
+================================= */
+
+#products {
+    background: #00a5ec;
+    opacity: 4;
 }
 
-/* Contact form */
-form input[type="email"] {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
+.blue {
+    color: #FF6F3C;
+    font-weight: boldest;
+    outline-color: black;
 }
 
-
-/* Carousel Styles */
 .carousel-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
     overflow: hidden;
+    position: relative;
 }
 
 .carousel-track {
@@ -156,15 +200,21 @@ form input[type="email"] {
     transition: transform 0.5s ease-in-out;
 }
 
+
 .carousel-item {
-    min-width: 300px;
-    margin: 0 10px;
+    min-width: 350px;
+    margin: 0 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .carousel-item img {
     width: 100%;
-    border-radius: 15px;
+    height: 300px;       /* Force same height */
+    object-fit: cover;   /* Crop nicely instead of stretching */
+    border-radius: 18px;
 }
 
 /* Coming Soon Badge */
@@ -172,31 +222,35 @@ form input[type="email"] {
     display: inline-block;
     background: #FF6F3C;
     color: #fff;
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: 12px;
     font-size: 0.8rem;
-    margin-left: 5px;
+    margin-left: 6px;
 }
 
-/* Carousel Buttons */
+
+/* ===============================
+   CAROUSEL BUTTONS
+================================= */
+
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #4DA6FF;
+    background: #ff8301;
     color: #fff;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     z-index: 10;
     transition: background 0.3s;
 }
 
 .carousel-btn:hover {
-    background: #357ACC;
+    background: #ffca2a;
 }
 
 .carousel-btn.prev {
@@ -207,46 +261,122 @@ form input[type="email"] {
     right: 10px;
 }
 
-/* Footer */
+
+/* ===============================
+   CONTACT FORM
+================================= */
+
+#contact {
+    background: #ffca2a;
+    opacity: 5;
+}
+
+form input[type="email"] {
+    padding: 12px;
+    width: 280px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.btn-orange {
+    background: #ff8301;
+    
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
 footer {
     background: #333;
     color: #fff;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
 footer a {
     color: #4DA6FF;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px;
 }
 
+
+
+
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
 @media (min-width: 768px) {
+
     .logo {
         max-width: 420px;
     }
 
-    header h1 {
-        font-size: 1.6rem;
-        max-width: 600px;
+    .hero h1 {
+        font-size: 1.8rem;
+        max-width: 900px;
     }
 
-    .btn-group {
-        flex-direction: row;
-        max-width: none;
-    }
-
-    .btn {
-        width: auto;
-    }
 }
 
 @media (min-width: 1024px) {
+
     .logo {
         max-width: 500px;
     }
 
-    header {
-        padding: 80px 20px;
+    .hero {
+        height: 100vh;
     }
+
+    /* Optional: left align content for premium feel */
+    section {
+        text-align: left;
+    }
+
+    section h2 {
+        text-align: left;
+    }
+
+    .btn-group {
+        text-align: left;
+    }
+}
+
+/* ===============================
+   ABOUT SECTION LAYOUT
+================================= */
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+
+    .about-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-text {
+        flex: 1;
+        padding-right: 60px; /* Space on right for image */
+    }
+
+    .about-image {
+        flex: 1;
+    }
+
 }
