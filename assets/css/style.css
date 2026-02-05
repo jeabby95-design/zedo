@@ -1,108 +1,38 @@
 /* ===============================
    GENERAL STYLES
 ================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --primary-font: "Noto Serif", serif;
+  --secondary-font: "Luckiest Guy", cursive;
+  --primary-color: #ff8301;
+  --secondary-color: #00a5ec;
+  --highlight-color: #ffca2a;
+  --highlight-color-light: #bfb5af;
+  --background-color: #f8fab1;
+}
+
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Playwrite NZ Basic", cursive;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     line-height: 1.6;
     color: #333;
+    background-color: #f8fab1;
     scroll-behavior: smooth;
 }
 
+p {
+      font-family: "SN Pro", sans-serif;
+      font-size: large;
+} 
 
-/* Reusable content width */
-.container {
-    width: 1000%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+ .nav-item{
+    color: #FF6F3C;
+ }
 
-
-/* ===============================
-   HERO HEADER
-================================= */
-
-.hero {
-    background: url("../images/header-image.png") no-repeat center center;
-    background-size: cover;
-    height: 90vh;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-
-/* Overlay for readability */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-
-/* ===============================
-   LOGO
-================================= */
-
-.logo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-top: 50px;
-}
-
-
-/* ===============================
-   HEADER TEXT
-================================= */
-
-.hero h1 {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    margin: 0;
-    max-width: 800px;
-}
-
-
-/* ===============================
-   BUTTONS
-================================= */
-
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #4DA6FF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
-    margin: 5px;
-}
-
-.btn:hover {
-    background: #357ACC;
-}
-
-.btn-group {
-    text-align: center;
-}
 
 
 /* ===============================
@@ -121,6 +51,13 @@ body {
     z-index: 100;
 }
 
+/* Bootstrap loads after custom CSS; reinforce sticky on navbar */
+.navbar.sticky-nav {
+    position: sticky !important;
+    top: 0;
+    z-index: 1030;
+}
+
 .sticky-nav a {
     text-decoration: none;
     color: #FF6F3C;
@@ -131,252 +68,261 @@ body {
 .sticky-nav a:hover {
     color: #357ACC;
 }
+/* ===================================
+   HERO SECTION
+   =================================== */
+#hero {
+  background: url("../images/header-image.png") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
 
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-center {
+  text-align: center;
+}
+
+.hero-logo {
+  width: 150px; /* adjust */
+  margin-top: 15%;
+}
+
+.hero-section h1 {
+    font-size: 1rem;
+    font-family: 'Playwrite NZ Basic';
+    font-weight: bold;
+    color: brown;
+    opacity: 2;
+  }
+
+
+.hero-section .bg-white {
+  opacity: 0.8;
+  min-height: 20px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.hero-section .custom-btn {
+  margin-top: 20px;
+}
+
+.custom-btn {
+  background-color: var(--highlight-color);
+  border-color: var(--highlight-color);
+  color: white;
+}
+
+.custom-btn:hover {
+  background-color: var(--highlight-color-light);
+  border-color: var(--highlight-color-light);
+  color: white;
+}
+
+
+#resources {
+    margin: 0px 30px;
+    padding: 0px 22px;
+}
+.resources-title {
+  margin: 0 10px;
+  color: #FF6F3C;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-decoration-line:underline
+}
+
+.resources-title {
+text-align:center;
+}
+
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
 
 /* ===============================
-   SECTIONS
+   ABOUT US (MOBILE FIRST)
 ================================= */
 
-section {
-    padding: 80px 0;
-    text-align: left;
+.about-us {
+  padding: 40px 0;
+  background: #fff;
 }
 
-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    color: #FF6F3C;
+.about-us__intro h2 {
+  margin-bottom: 16px;
+  font-weight:bolder;
 }
 
-section p {
-    max-width: 900px;
-    margin-bottom: 25px;
+.about-us__title {
+  margin: 2px 0 16px;
+  color: #FF6F3C;
+  font-size: 1.4rem;
+  font-weight: bolder;
 }
 
-
-/* ===============================
-   FADE IN ANIMATION
-================================= */
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
+.family-section {
+  background: #ffca2a;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 15px;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.about-us__intro p {
+  max-width: none;
+  width: 100%;
+  text-align:justify
 }
 
-
-/* ===============================
-   PRODUCTS CAROUSEL
-================================= */
-
-#products {
-    background: #00a5ec;
-    opacity: 4;
-}
-
-.blue {
-    color: #FF6F3C;
-    font-weight: boldest;
-    outline-color: black;
-}
-
-.carousel-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.about-us__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 24px;
 }
 
 
-.carousel-item {
-    min-width: 350px;
-    margin: 0 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.about-us__card {
+  background: #f8f9fb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 300px;       /* Force same height */
-    object-fit: cover;   /* Crop nicely instead of stretching */
-    border-radius: 18px;
+.about-us__card img {
+  width: 100%;
+  height: 220px;
+  object-fit:contain;
+  display: block;
 }
 
-/* Coming Soon Badge */
-.coming-soon .badge {
-    display: inline-block;
-    background: #FF6F3C;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    margin-left: 6px;
+.about-us__card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-
-/* ===============================
-   CAROUSEL BUTTONS
-================================= */
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #ff8301;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    font-size: 1.4rem;
-    z-index: 10;
-    transition: background 0.3s;
+.about-us__card h3 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: 0;
+  color: #FF6F3C;
 }
 
-.carousel-btn:hover {
-    background: #ffca2a;
-}
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
+.about-us__card p {
+  margin: 0;
+  font-family: "Playwrite NZ Basic", cursive;
+  font-size: 17px;
 }
 
 
-/* ===============================
-   CONTACT FORM
-================================= */
+
+
+/* ===================================
+   CONTACT SECTION
+   =================================== */
+.contact-section {
+  /* Customize contact section styles here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+  color: white;
+  text-align: left;
+  background-color: #357ACC;
+}
+
+.contact-section h2 {
+  color: white;
+  margin-top: 16px;
+}
 
 #contact {
-    background: #ffca2a;
-    opacity: 5;
+  margin-top: 20px;
 }
 
-form input[type="email"] {
-    padding: 12px;
-    width: 280px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  color: var(--secondary-color);
+  padding: var(--bs-modal-padding);
 }
 
-.btn-orange {
-    background: #ff8301;
-    
+/* ===================================
+   FOOTER SECTION
+   =================================== */
+.footer-section {
+  /* Customize footer section styles here */
+  text-align: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  flex: space-between;
+  background-color: white;
 }
 
-/* ===============================
-   FOOTER
-================================= */
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 25px;
-    text-align: center;
-}
-
-footer a {
-    color: #4DA6FF;
-    text-decoration: none;
-    margin: 0 12px;
+/* Footer icon spacing */
+.footer-section .icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.6rem;
+  color: inherit;
+  text-decoration: none;
 }
 
 
 
 
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================= */
 
 @media (min-width: 768px) {
-
-    .logo {
-        max-width: 420px;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-        max-width: 900px;
-    }
-
+  .about-us__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1024px) {
-
-    .logo {
-        max-width: 500px;
-    }
-
-    .hero {
-        height: 100vh;
-    }
-
-    /* Optional: left align content for premium feel */
-    section {
-        text-align: left;
-    }
-
-    section h2 {
-        text-align: left;
-    }
-
-    .btn-group {
-        text-align: left;
-    }
+  .about-us__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
-/* ===============================
-   ABOUT SECTION LAYOUT
-================================= */
 
-.about-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
 
-.about-image img {
-    width: 100%;
-    border-radius: 20px;
-}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Customize styles for extra large screens here */
+  
+  .hero-section .banner {
+    margin-top: 10px;
+  }
 
-/* Desktop Layout */
-@media (min-width: 1024px) {
+  .hero-section {
+    min-width: 1200px;
+    min-height: 800px;
+  }
 
-    .about-wrapper {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+  .hero-section h1 {
+    font-size: 1.5rem;
+    color: brown;
+    opacity: 2;
+  }
 
-    .about-text {
-        flex: 1;
-        padding-right: 60px; /* Space on right for image */
-    }
-
-    .about-image {
-        flex: 1;
-    }
-
+  .hero-logo {
+    margin-top: 80px;
+    min-width: 380px
+  }
 }

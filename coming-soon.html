@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zedo Learning Hub | Coming Soon</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .coming-soon-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 24px;
+    }
+
+    .coming-soon-card {
+      background: #fff;
+      border-radius: 18px;
+      max-width: 720px;
+      width: 100%;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .coming-soon-card h1 {
+      color: #FF6F3C;
+      margin-bottom: 12px;
+    }
+
+    .coming-soon-card p {
+      margin: 0 0 12px;
+    }
+
+    .coming-soon-actions {
+      margin-top: 20px;
+    }
+
+    .coming-soon-actions .btn {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="coming-soon-overlay" role="dialog" aria-modal="true" aria-labelledby="comingSoonTitle">
+    <div class="coming-soon-card">
+      <h1 id="comingSoonTitle">COMING SOON</h1>
+      <p>The Zedo Learning Hub is still in progress, but we’re building something special for your family.</p>
+      <p>We’re working hard to launch it soon — check back shortly!</p>
+      <div class="coming-soon-actions">
+        <a class="btn" href="index.html">Go Back Home</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+mutation SeedDatabase @transaction @auth(level: PUBLIC, insecureReason: "This operation is for seeding the database with initial data and is safe to expose.") {
+  user_insertMany(data: [
+    {
+      id: "6777a0ca-38e4-44bc-a978-48c99813e2c8",
+      displayName: "Demo User 1",
+      email: "demo1@example.com",
+      createdAt: "2024-01-01T00:00:00Z"
+    },
+    {
+      id: "8f9e9f5a-6b8f-4b1d-9a9e-2b6b8f4b1d9a",
+      displayName: "Demo User 2",
+      email: "demo2@example.com",
+      createdAt: "2024-01-02T00:00:00Z"
+    }
+  ])
+  course_insertMany(data: [
+    {
+      id: "a1b2c3d4-e5f6-4789-9012-34567890abcd",
+      creatorId: "6777a0ca-38e4-44bc-a978-48c99813e2c8",
+      title: "Introduction to FDC",
+      category: "Technology",
+      description: "Learn the basics of Firebase Data Connect",
+      difficulty: "Beginner",
+      createdAt: "2024-01-05T00:00:00Z",
+      published: true,
+      price: 29.99
+    },
+    {
+      id: "b2c3d4e5-f6a7-489a-b01c-d2e3f4a5b6c7",
+      creatorId: "8f9e9f5a-6b8f-4b1d-9a9e-2b6b8f4b1d9a",
+      title: "Advanced FDC Concepts",
+      category: "Technology",
+      description: "Explore advanced features of Firebase Data Connect",
+      difficulty: "Advanced",
+      createdAt: "2024-01-10T00:00:00Z",
+      published: true,
+      price: 49.99
+    }
+  ])
+  enrollment_insertMany(data: [
+    {
+      userId: "6777a0ca-38e4-44bc-a978-48c99813e2c8",
+      courseId: "a1b2c3d4-e5f6-4789-9012-34567890abcd",
+      enrolledAt: "2024-01-06T00:00:00Z",
+      progress: "50%",
+      status: "In Progress"
+    },
+    {
+      userId: "8f9e9f5a-6b8f-4b1d-9a9e-2b6b8f4b1d9a",
+      courseId: "b2c3d4e5-f6a7-489a-b01c-d2e3f4a5b6c7",
+      enrolledAt: "2024-01-11T00:00:00Z",
+      progress: "25%",
+      status: "In Progress"
+    }
+  ])
+}

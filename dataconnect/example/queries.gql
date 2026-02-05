@@ -1,0 +1,34 @@
+mutation CreateCourse($title: String!, $description: String!, $category: String!, $difficulty: String!, $price: Float!, $published: Boolean!, $creatorId: UUID) @auth(level: USER) {
+  course_insert(data: {title: $title, description: $description, category: $category, difficulty: $difficulty, price: $price, published: $published, creatorId: $creatorId})
+}
+
+query ListCourses @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  courses {
+    id
+    title
+    description
+    category
+    difficulty
+    price
+    published
+    creatorId
+  }
+}
+
+mutation EnrollInCourse($userId: UUID!, $courseId: UUID!) @auth(level: USER) {
+  enrollment_insert(data: {userId: $userId, courseId: $courseId, enrolledAt_expr: "request.time", progress: "0", status: "enrolled"})
+}
+
+query GetMyCourses($userId: UUID!) @auth(level: USER) {
+  user(key: {id: $userId}) {
+    courses_via_Enrollment {
+      id
+      title
+      description
+      category
+      difficulty
+      price
+      published
+    }
+  }
+}

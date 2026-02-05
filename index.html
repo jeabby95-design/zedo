@@ -1,211 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zedo | Speak Edo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zędo | Speak Edo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-
+    <!-- Google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" 
+rel="stylesheet">
+    <!--Logo as Favicon-->
+    <link rel="icon" href="assets/images/zedo-logo.png" type="image/png">
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Styles sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
+<!--BODY-->
 <body>
 
-
-<!-- ===============================
-     HERO SECTION
-================================= -->
-
-<header class="hero">
-    <div class="header-content container">
-        <img src="assets/images/zedo-logo.png" alt="Zedo Logo" class="logo">
-
-        <h1>
-            Learn, Listen and Speak Edo language. - Learning resources for all. 
-        </h1>
-
-        <div class="btn-group">
-            <a href="https://www.amazon.com" class="btn" target="_blank">
-                Shop on Amazon
-            </a>
-            <a href="https://www.ebay.com" class="btn" target="_blank">
-                Visit eBay Store
-            </a>
-        </div>
+    <!--NAVBAR AREA-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-nav">
+  <div class="container-fluid">
+       <a class="navbar-brand" href="index.html">
+      <img src="assets/images/zedo-logo.png" alt="Logo" width="30" height="24" 
+      class="d-inline-block align-text-top"> Zędo </a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+     </button>
+    <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+        <ul class="nav">
+        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html">Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#resources">Resources</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"> <a class="nav-link" href="coming-soon.html">Learning Hub</a></li>
+      </ul>
     </div>
-</header>
-
-
-<!-- ===============================
-     NAVIGATION
-================================= -->
-
-<nav class="sticky-nav">
-    <a href="#about">About</a>
-    <a href="#products">Resources</a>
-    <a href="#how-it-works">How It Works</a>
-    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-
-<!-- ===============================
-     ABOUT SECTION
-================================= -->
-
-
-<section id="about" class="fade-in">
-    <div class="container about-wrapper">
-        
-        <div class="about-text">
-            <h2>About Zedo</h2>
-            <p>
-                Zedo was created to help children learn Edo in a simple, joyful way where maintaining
-                language and culture can feel difficult.
-            </p>
-            <p>
-            We understand that many parents want their children to speak Edo
-            but may not always have the time, confidence, or resources to teach it.
-            Busy schedules, limited resources, and language gaps can make it challenging.
-            That’s why we built Zedo.
-            Zedo bridges that gap through interactive tools, audio support,
-            and engaging learning materials.
-            Zedo was created for families who want their children to grow up connected to their language and culture — even when living far from home. 
-           
-            Our mission is simple:
-            To make learning Edo language joyful, accessible, and natural for children everywhere.
-            Through posters, interactive flashcards, audio pronunciation, books, videos, and engaging learning materials, 
-            Zedo helps children build vocabulary, confidence, and cultural connection — one word at a time.
-        </p>
-            </p>
-        </div>
-
-        <div class="about-image">
-            <img src="assets/images/about-image.png" alt="Children learning Edo">
-        </div>
-
+      <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+         <div class="hero-center">
+    <img src="assets/images/zedo-logo.png" alt="Zedo Logo" class="hero-logo">
     </div>
-</section>
-
-
-
-<!-- ===============================
-     PRODUCTS SECTION
-================================= -->
-
-<section id="products" class="fade-in">
-    <div class="container">
-        <h2 class="blue">Our Resources</h2>
-
-        <div class="carousel-container">
-            <div class="carousel-track">
-
-                <div class="carousel-item">
-                    <img src="assets/images/zedo-family.png" alt="Talking Flashcard Device">
-                    <p>Talking Flashcard Device + Writing Tablet</p>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="assets/images/boy-holding-tab.png" alt="Flash Cards">
-                    <p>Interactive Flash Cards</p>
-                </div>
-
-                <div class="carousel-item coming-soon">
-                    <img src="assets/images/mum-and-son-with-zedo.png" alt="Online Learning Resources">
-                    <p>
-                        Online Videos & Learning Hub 
-                        <span class="badge">Coming Soon</span>
-                    </p>
-                </div>
-
+      <div class="container-sm container-md container-lg container-xl container-xxl">
+        <div class="row">
+          <div class="col text-center">
+            <div class="bg-white banner">
+              <h1>
+                Learn, Listen and Speak Edo language. - Learning resources for all.
+            </h1>
             </div>
 
-            <button class="carousel-btn prev">&lt;</button>
-            <button class="carousel-btn next">&gt;</button>
-        </div>
-
-        <div style="margin-top:40px;">
-            <a href="https://www.amazon.com" class="btn btn-orange" target="_blank">
-                Shop Now
+            <a
+              href="www.amazon.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary custom-btn hoover"
+            >
+              Shop now
             </a>
+          </div>
         </div>
+      </div>
+    </section>
+
+
+<!--ABOUT US-->
+<section id="about" class="about-us">
+  <div class="container">
+    <div class="about-us__intro">
+      <h2 class="resources-title">About Zędo World</h2>
+      <p>
+        Zedo World is a family of characters designed to make Edo language learning joyful,
+        consistent, and interactive for children. Through stories, videos, songs, and playful
+        activities, each character supports your child’s learning journey in a familiar way.
+        Consistency is vital when teaching children, and Zedo World helps make learning feel
+        safe, fun, and repeatable.
+      </p>
     </div>
+
+    <section class="family-section">
+      <h3 class="about-us__title">Meet the Zędo World Family</h3>
+      <div class="about-us__grid">
+      <article class="about-us__card">
+        <img src="assets/images/zedo-eniye.png" alt="Eniye, a Zedo World character">
+        <div class="about-us__card-body">
+          <h3>Eniye</h3>
+          <p>Curious and playful, Eniye helps children learn everyday words through games and repetition.</p>
+        </div>
+      </article>
+
+      <article class="about-us__card">
+        <img src="assets/images/zedo-isoken.png" alt="Isoken, a Zedo World character">
+        <div class="about-us__card-body">
+          <h3>Isokęn</h3>
+          <p>Isoken brings songs and rhythm to learning, making pronunciation and listening feel natural.</p>
+        </div>
+      </article>
+
+      <article class="about-us__card">
+        <img src="assets/images/zedo-omomo.png" alt="Omomo, a Zedo World character">
+        <div class="about-us__card-body">
+          <h3>Omomo</h3>
+          <p>Omomo loves stories and helps children build vocabulary through simple, memorable narratives.</p>
+        </div>
+      </article>
+
+      <article class="about-us__card">
+        <img src="assets/images/zedo-osaretin.png" alt="Osaretin, a Zedo World character">
+        <div class="about-us__card-body">
+          <h3>Osaretin</h3>
+          <p>Osarętin guides practice time with gentle encouragement, helping kids feel confident.</p>
+        </div>
+      </article>
+
+      <article class="about-us__card">
+        <img src="assets/images/zedo-mum-and-omomo.png" alt="Zedo Mum and Omomo">
+        <div class="about-us__card-body">
+          <h3>Iye vb'omomo</h3>
+          <p>Family learning moments that model consistency and everyday Edo language use.</p>
+        </div>
+      </article>
+
+      <article class="about-us__card">
+        <img src="assets/images/zedo-parents-and-baby.png" alt="Zedo parents with baby">
+        <div class="about-us__card-body">
+          <h3>Baba, Iye vb'omomo</h3>
+          <p>Supportive parents that encourage growth and celebrate progress at every step.</p>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <div class="about-us__intro">
+      <p>
+        Zedo was created to help children learn Edo in a simple, joyful way where maintaining
+        language and culture can feel difficult. We understand that many parents want their
+        children to speak Edo but may not always have the time, confidence, or resources to teach it.
+        Busy schedules, limited resources, and language gaps can make it challenging. That’s why we
+        built Zedo. Zedo bridges that gap through interactive tools, audio support, and engaging
+        learning materials. Zedo was created for families who want their children to grow up connected
+        to their language and culture — even when living far from home. Our mission is simple:
+        to make learning Edo language joyful, accessible, and natural for children everywhere. Through
+        posters, interactive flashcards, audio pronunciation, books, videos, and engaging learning materials,
+        Zedo helps children build vocabulary, confidence, and cultural connection — one word at a time.
+      </p>
+    </div>
+  </div>
 </section>
 
 
-<!-- ===============================
-     HOW IT WORKS
-================================= -->
-
-<section id="how-it-works" class="fade-in">
-    <div class="container">
-        <h2>How Zedo Helps Your Child Learn</h2>
-
-        <p>
-            Learning a language is most effective when it feels natural. Zedo uses a simple three-step approach that are is simple and effective:
-        </p>
-
-        <p>
-            <strong>1. See</strong> — Clear visuals help children associate words with images. 
-            Children connect images with words to build strong visual associations.
-        </p>
-        <p>
-            <strong>2. Hear</strong> — Native audio pronunciation builds confidence and accuracy. 
-            Clear native pronunciation helps children develop accurate listening skills and proper tone.
-        </p>
-        <p>
-            <strong>3. Speak</strong> — Repetition and engagement reinforce natural learning.
-            Repetition builds confidence. The more they hear and repeat, the more natural it becomes.
-        </p>
-
-        <p>
-            By combining visual, auditory, and interactive learning,
-            children build language skills naturally and confidently.
-            Zedo helps develop real language familiarity — not just memorization.
-        </p>
+<!--RESOURCES-->
+<h2 class="resources-title">Resources</h2>
+<div class="row row-cols-1 row-cols-md-2 g-4" id="resources">
+  <div class="col">
+    <div class="card">
+      <img src="assets/images/zedo-parents-and-baby.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Educational Posters</h5>
+        <p class="card-text">Bright, child‑friendly posters that build everyday Edo vocabulary at a glance.</p>
+      </div>
     </div>
-</section>
-
-
-<!-- ===============================
-     CONTACT SECTION
-================================= -->
-
-<section id="contact" class="fade-in">
-    <div class="container">
-        <h2>Join the Zedo Community</h2>
-
-        <p>
-            Stay updated on new learning tools, videos, and resources designed to support your child’s Edo journey.
-            We’re building more than products — we’re building a movement to keep Edo alive for the next generation.
-            Subscribe below and grow with us.
-        </p>
-
-        <form>
-            <input type="email" placeholder="Your email address" required>
-            <button type="submit" class="btn">Subscribe</button>
-        </form>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="assets/images/boy-holding-tab.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Talking Flashcards</h5>
+        <p class="card-text">Interactive cards with native audio to help kids hear, repeat, and remember.</p>
+      </div>
     </div>
-</section>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="assets/images/mum-and-son-with-zedo.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Print At Home Resources</h5>
+        <p class="card-text">Worksheets, games, and activities you can download and use right away.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="assets/images/game-start-image.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Online Resources</h5>
+        <p class="card-text">Videos, songs, and interactive lessons that bring Edo learning to life.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- CONTACT SECTION -->
+    <!-- Add your contact form or contact details here -->
+    <section class="section-padding contact-section" id="contact">
+      <div class="row">
+        <div class="col-md-6">
+          <h2><strong>Join the Zedo Community</strong></h2>
+          <p>
+            Stay updated on new learning tools, videos, and resources designed to support your child’s Edo journey. 
+            We’re building more than products, we’re building a movement to keep Edo alive for the next generation. 
+           Contact us if you require futher information or to support the movement.
+          </p>
+          <p> <strong>Email:</strong>hellozedo@gmail.com</p>
+        </div>
+
+        <div class="col-md-6">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                placeholder="Describe your concern"
+                required
+              >
+              </textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary custom-btn hoover"
+            >
+              Submit
+            </button>
+
+            <!-- Bootstrap Modal -->
+            <div
+              class="modal fade"
+              id="submitModal"
+              tabindex="-1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title">Success</h3>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                    ></button>
+                  </div>
+
+                  <div class="modal-body">
+                    Thank you for contacting us.
+                    Someone will be in touch you within 24 hours.
+                  </div>
+
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
 
-<!-- ===============================
-     FOOTER
-================================= -->
 
-<footer>
-    <p>&copy; 2026 Zedo. All Rights Reserved.</p>
+    <!-- FOOTER -->
+    
+    <footer id="footer" class="footer-section">
 
-    <p>
-        <a href="#">Privacy Policy</a> |
-        <a href="#">Terms</a> |
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com" target="_blank">Instagram</a>
-    </p>
-</footer>
+      <!-- SOCIAL MEDIA -->
 
+      <div class="social-media">
+        Follow us on:
+<a href="https://www.facebook.com" class="icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
 
-<script src="assets/script.js"></script>
+<a href="https://www.tiktok.com/@zedo_world" class="icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+
+<a href="https://www.instagram.com/zedo_world" class="icon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        
+<p> <i class="fa-regular fa-copyright"></i> 2026 zędo All rights reserved. </p>
+      </div>
+    </footer>
+
+   
+ 
+
+ <!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+  (function () {
+    const form = document.getElementById("contactForm");
+    const modalEl = document.getElementById("submitModal");
+
+    if (!form || !modalEl || !window.bootstrap) return;
+
+    const submitModal = new bootstrap.Modal(modalEl);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (form.checkValidity()) {
+        submitModal.show();
+        form.reset();
+      } else {
+        form.reportValidity();
+      }
+    });
+  })();
+</script>
+
+<!-- Font Awesome Kit -->
+<script src="https://kit.fontawesome.com/94ea9b50eb.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
